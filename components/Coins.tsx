@@ -1,16 +1,7 @@
-export default function Coins(){
-
+export default function Coins({setCoins}){
     return (
-        <form action="/action_page.php" method="post">
-            <label>Choose a number of gacha coins:</label>
-            <select name="coins" id="coins">
-            <option value="10">x10</option>
-            <option value="20">x20</option>
-            <option value="30">x30</option>
-            <option value="40">x40</option>
-            <option value="50">x50</option>
-            </select>
-            <input type="submit" value="Submit"></input>
-        </form>
+        <input type="number" id="quantity" name="quantity" min="10" max="100" step="10" onChange={ (e) => {
+            setCoins(e.target.value);
+        }}></input>
     )
 }
