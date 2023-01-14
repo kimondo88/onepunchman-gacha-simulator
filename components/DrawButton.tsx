@@ -1,5 +1,7 @@
-export default function DrawButton({draw}){
+export default function DrawButton({draw, coins, char}){
     return (
-        <button onClick={draw}></button>
+        <button onClick={() => {
+            draw(coins, char);
+        }}>Draw</button>
     )
 }
