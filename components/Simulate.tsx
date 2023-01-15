@@ -19,7 +19,7 @@ export default function Simulate(){
             const random = Math.floor(Math.random() * 1008);
             for(let j = 0; j <  length; j++){
                 if(random <= items.normal["number"][j] && j == 0){
-                    draw.push(items.normal[j])
+                    draw.push(select)
                     break;
                 }else if(random <= items.normal["number"][j]){
                     draw.push(items.normal[j])
