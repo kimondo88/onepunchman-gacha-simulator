@@ -1,4 +1,4 @@
-import { useDebugValue, useState } from "react";
+import { useMemo, useState } from "react";
 import Coins from "./Coins";
 import Select from "./Select";
 import Chosen from "./Chosen";
@@ -6,9 +6,10 @@ import DrawButton from "./DrawButton";
 import items from "../data/items.json";
 
 export default function Simulate(){
-    const [coins, setCoins] = useState(10);
+    const [coins, setCoins] = useState(0);
     const [select, setSelect] = useState("Owlboros");
     const [inventory, setInventory] = useState([]);
+    const [current, setCurrent] = useState([]);
 
     function Draw(coins: number, char: string){
         const draw: string[] = [];
@@ -28,24 +29,23 @@ export default function Simulate(){
         
         }
         //reduce number of coins
-        setCoins(coins-10);
-
+        setCoins(old => old + 10);
+        setInventory(old => [...old, draw]);
         // take number check array on number in items, return index from items
-        return setInventory(draw);
+        return setCurrent(draw);
     }
 
     return (
         <>
-            <Coins setCoins={setCoins}/>
-            <br/>
-            <p>Ow gacha coins: x{coins}</p>
+            <p>Infinite gacha pull</p>
+            <p>Ow gacha coins used: x{coins}</p>
             <br/>
             <Select setSelect={setSelect}/>
             <p>{select}</p>
             <Chosen chosen={select}/>
             <DrawButton draw={Draw} coins={coins} char={select}/>
             <ul>
-                {inventory.map((value, index) => {
+                {current.map((value, index) => {
                     return <li key={index}>{value}</li>
                 })}
             </ul>

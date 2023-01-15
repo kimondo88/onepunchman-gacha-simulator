@@ -37,5 +37,34 @@
         "27" : "decent character exp"
     },
     "event": {
+    },
+    "icons" : {
+        "diamond" : "",
+        "breaktrough card" : "",
+        "random elite physical character" : "",
+        "random elite hi-tech character" : "",
+        "random elite weapon character" : "",
+        "random elite psychic character" : "",
+        "spirit shard 50" : "",
+        "spirit shard 20" : "",
+        "spirit shard 10" : "",
+        "gear modification device" : "",
+        "select legendary potion" : "",
+        "heroes gathering A chest" : "",
+        "heroes gathering B chest" : "",
+        "disastrous invasion A chest" : "",
+        "disastrous invasion B chest" : "",
+        "machine energy" : "",
+        "machine blueprint" : "",
+        "large cash" : "",
+        "large character exp" : "",
+        "decent amount strength crystal" : "",
+        "random rare physical character" : "",
+        "random rare hi-tech character" : "",
+        "random rare weapon character" : "",
+        "random rare psychic character" : "",
+        "tiny amount of strength crystal" : "",
+        "decent cash" : "",
+        "decent character exp" : ""
     }
 }
