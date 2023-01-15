@@ -1,8 +1,9 @@
 import { useMemo, useState } from "react";
-import Coins from "./Coins";
+// import Coins from "./Coins";
 import Select from "./Select";
 import Chosen from "./Chosen";
 import DrawButton from "./DrawButton";
+import ImageDrop from "./ImageDrop";
 import items from "../data/items.json";
 
 export default function Simulate(){
@@ -46,7 +47,7 @@ export default function Simulate(){
             <DrawButton draw={Draw} coins={coins} char={select}/>
             <ul>
                 {current.map((value, index) => {
-                    return <li key={index}>{value}</li>
+                    return <li key={index}><ImageDrop drop={value}/></li>
                 })}
             </ul>
             
