@@ -48,7 +48,7 @@ export default function Simulate(){
             <DrawButton draw={Draw} coins={coins} char={select}/>
             <div className={styles.drawbox}>
                 {current.map((value, index) => {
-                    return <ImageDrop drop={value} key={index}/>
+                    return <ImageDrop drop={value} key={index} />
                 })}
             </div>
             
