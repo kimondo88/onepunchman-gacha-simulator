@@ -1,0 +1,7 @@
+.drawbox{
+    display: grid;
+    grid-template-columns: repeat(5, 2fr);
+    grid-template-rows: repeat(2, 2fr);
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+  }

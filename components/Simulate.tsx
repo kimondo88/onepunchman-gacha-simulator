@@ -5,6 +5,7 @@ import Chosen from "./Chosen";
 import DrawButton from "./DrawButton";
 import ImageDrop from "./ImageDrop";
 import items from "../data/items.json";
+import styles from "../styles/Simulate.module.scss";
 
 export default function Simulate(){
     const [coins, setCoins] = useState(0);
@@ -45,11 +46,11 @@ export default function Simulate(){
             <p>{select}</p>
             <Chosen chosen={select}/>
             <DrawButton draw={Draw} coins={coins} char={select}/>
-            <ul>
+            <div className={styles.drawbox}>
                 {current.map((value, index) => {
-                    return <li key={index}><ImageDrop drop={value}/></li>
+                    return <ImageDrop drop={value} key={index}/>
                 })}
-            </ul>
+            </div>
             
         </>
     )
