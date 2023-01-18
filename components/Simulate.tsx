@@ -4,13 +4,14 @@ import Select from "./Select";
 import Chosen from "./Chosen";
 import DrawButton from "./DrawButton";
 import ImageDrop from "./ImageDrop";
+import DrawBox from "./DrawBox";
 import items from "../data/items.json";
 import styles from "../styles/Simulate.module.scss";
 
 export default function Simulate(){
     const [coins, setCoins] = useState(0);
     const [select, setSelect] = useState("Owlboros");
-    const [inventory, setInventory] = useState([]);
+    const [inventory, setInventory] = useState({});
     const [current, setCurrent] = useState([]);
 
     function Draw(coins: number, char: string){
@@ -32,9 +33,26 @@ export default function Simulate(){
         }
         //reduce number of coins
         setCoins(old => old + 10);
-        setInventory(old => [...old, draw]);
+        AddToInventory(draw);
         // take number check array on number in items, return index from items
         return setCurrent(draw);
+    }
+
+    function AddToInventory(draw: string[]){
+        // inventory = {
+        //    "character" : 1, how inventory character should look like;
+        // }
+        for(let i = 0; i < draw.length; i++){
+            if(typeof inventory[draw[i]] == 'undefined'){
+                console.log(inventory[draw[i]]);
+                setInventory( (old) => Object.defineProperty(old, draw[i], {
+                    value: 1,
+                    writable : true
+                }))
+            }else{
+                setInventory( (old) => old[draw[i]] = old[draw[i]] + 1);
+            }
+        }
     }
 
     return (
@@ -46,12 +64,7 @@ export default function Simulate(){
             <p>{select}</p>
             <Chosen chosen={select}/>
             <DrawButton draw={Draw} coins={coins} char={select}/>
-            <div className={styles.drawbox}>
-                {current.map((value, index) => {
-                    return <ImageDrop drop={value} key={index} />
-                })}
-            </div>
-            
+            <DrawBox current={current}/>
         </>
     )
 }
