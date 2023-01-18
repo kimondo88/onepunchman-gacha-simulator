@@ -3,10 +3,9 @@ import { useMemo, useState } from "react";
 import Select from "./Select";
 import Chosen from "./Chosen";
 import DrawButton from "./DrawButton";
-import ImageDrop from "./ImageDrop";
 import DrawBox from "./DrawBox";
 import items from "../data/items.json";
-import styles from "../styles/Simulate.module.scss";
+import ShowInventory from "./ShowInventory";
 
 export default function Simulate(){
     const [coins, setCoins] = useState(0);
@@ -33,26 +32,26 @@ export default function Simulate(){
         }
         //reduce number of coins
         setCoins(old => old + 10);
-        AddToInventory(draw);
+        AddToInventory(draw, inventory);
         // take number check array on number in items, return index from items
         return setCurrent(draw);
     }
 
-    function AddToInventory(draw: string[]){
-        // inventory = {
-        //    "character" : 1, how inventory character should look like;
-        // }
+    function AddToInventory(draw: string[], inventory: object){
+        const inv = {...inventory};
+        
         for(let i = 0; i < draw.length; i++){
-            if(typeof inventory[draw[i]] == 'undefined'){
-                console.log(inventory[draw[i]]);
-                setInventory( (old) => Object.defineProperty(old, draw[i], {
-                    value: 1,
-                    writable : true
-                }))
+            if(inv.hasOwnProperty(draw[i])){
+                inv[draw[i]] = inv[draw[i]] + 1
             }else{
-                setInventory( (old) => old[draw[i]] = old[draw[i]] + 1);
+                Object.defineProperty(inv, draw[i], {
+                    value: 1,
+                    writable: true
+                })
             }
         }
+        console.log(inv);
+        return setInventory(old => { return inv});
     }
 
     return (
@@ -65,6 +64,7 @@ export default function Simulate(){
             <Chosen chosen={select}/>
             <DrawButton draw={Draw} coins={coins} char={select}/>
             <DrawBox current={current}/>
+            <ShowInventory inventory={inventory}/>
         </>
     )
 }
