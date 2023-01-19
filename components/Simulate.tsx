@@ -16,7 +16,7 @@ export default function Simulate(){
     const [count, setCount] = useState([]);
 
     useMemo(() => {
-        setPulls(Object.entries(inventory));
+        setPulls(Object.keys(inventory));
         setCount(Object.values(inventory));
     }, [inventory])
 

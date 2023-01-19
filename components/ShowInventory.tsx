@@ -16,9 +16,9 @@ export default function ShowInventory({pulls, count}){
             {
                 count.map((value, index) => {
                     if(index < 14){
-                        return <div key={"count" + index} className={styles.invCountOne} style={{ gridRowStart : index + 1}}>{value}</div>;
+                        return <div key={"count" + index} className={styles.invCountOne} style={{ gridRowStart : index + 1}}>x{value}</div>;
                     }else{
-                        return <div key={"count" + index} className={styles.invCountwo} style={{ gridRowStart : -13 + index}}>{value}</div>;
+                        return <div key={"count" + index} className={styles.invCountwo} style={{ gridRowStart : -13 + index}}>x{value}</div>;
                     }
                 })
             }
