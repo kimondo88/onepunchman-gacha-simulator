@@ -12,6 +12,13 @@ export default function Simulate(){
     const [select, setSelect] = useState("Owlboros");
     const [inventory, setInventory] = useState({});
     const [current, setCurrent] = useState([]);
+    const [pulls, setPulls] = useState([]);
+    const [count, setCount] = useState([]);
+
+    useMemo(() => {
+        setPulls(Object.entries(inventory));
+        setCount(Object.values(inventory));
+    }, [inventory])
 
     function Draw(coins: number, char: string){
         const draw: string[] = [];
@@ -46,12 +53,13 @@ export default function Simulate(){
             }else{
                 Object.defineProperty(inv, draw[i], {
                     value: 1,
-                    writable: true
+                    writable: true,
+                    enumerable: true
                 })
             }
         }
         console.log(inv);
-        return setInventory(old => { return inv});
+        return setInventory(old => inv);
     }
 
     return (
@@ -64,7 +72,7 @@ export default function Simulate(){
             <Chosen chosen={select}/>
             <DrawButton draw={Draw} coins={coins} char={select}/>
             <DrawBox current={current}/>
-            <ShowInventory inventory={inventory}/>
+            <ShowInventory pulls={pulls} count={count}/>
         </>
     )
 }

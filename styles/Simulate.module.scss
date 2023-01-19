@@ -10,3 +10,31 @@
     width: 5vw;
     height: 5vh;
 }
+
+.invBox{
+    display: grid;
+    grid-template-columns: "first second third four";
+    grid-template-rows: repeat(14, 1fr);
+    grid-row-gap: .5rem;
+    grid-column-gap: .5rem;
+}
+
+.invItemOne{
+    grid-column-start: "first";  
+    grid-column-end: "second";
+}
+
+.invItemTwo{
+    grid-column-start: "third";  
+    grid-column-end: "four";
+}
+
+.invCountOne{
+    grid-column-start: "second";  
+    grid-column-end: "third";
+}
+
+.invCountTwo{
+    grid-column-start: "four";  
+    grid-column-end: 5;
+}
