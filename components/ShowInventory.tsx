@@ -7,18 +7,18 @@ export default function ShowInventory({pulls, count}){
             {
                 pulls.map((value, index) => {
                     if(index < 14){
-                        return <div key={"item" + index} className={styles.invItemOne}>{value}</div>;
+                        return <div key={"item" + index} className={styles.invItemOne} style={{ gridRowStart : index + 1}}>{value}</div>;
                     }else{
-                        return <div key={"item" + index} className={styles.invItemTwo}>{value}</div>;
+                        return <div key={"item" + index} className={styles.invItemTwo} style={{ gridRowStart : -13 + index}}>{value}</div>;
                     }
                 })
             }
             {
                 count.map((value, index) => {
                     if(index < 14){
-                        return <div key={"count" + index} className={styles.invCountOne}>{value}</div>;
+                        return <div key={"count" + index} className={styles.invCountOne} style={{ gridRowStart : index + 1}}>{value}</div>;
                     }else{
-                        return <div key={"count" + index} className={styles.invCountwo}>{value}</div>;
+                        return <div key={"count" + index} className={styles.invCountwo} style={{ gridRowStart : -13 + index}}>{value}</div>;
                     }
                 })
             }

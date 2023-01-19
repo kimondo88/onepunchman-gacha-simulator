@@ -13,28 +13,30 @@
 
 .invBox{
     display: grid;
-    grid-template-columns: "first second third four";
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(14, 1fr);
     grid-row-gap: .5rem;
     grid-column-gap: .5rem;
 }
 
 .invItemOne{
-    grid-column-start: "first";  
-    grid-column-end: "second";
+    grid-column-start: 1;  
+    grid-column-end: 2;
+    grid-row-end: 15;
 }
 
 .invItemTwo{
-    grid-column-start: "third";  
-    grid-column-end: "four";
+    grid-column-start: 3;  
+    grid-column-end: 4;
 }
 
 .invCountOne{
-    grid-column-start: "second";  
-    grid-column-end: "third";
+    grid-column-start: 2;  
+    grid-column-end: 3;
+    grid-row-end: 15;
 }
 
 .invCountTwo{
-    grid-column-start: "four";  
+    grid-column-start: 4  ;
     grid-column-end: 5;
 }
