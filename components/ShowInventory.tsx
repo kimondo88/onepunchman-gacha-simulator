@@ -16,8 +16,10 @@ export default function ShowInventory({pulls, count}){
                         return <Image src={data.icons[value]} width={width} height={height} key={"item" + index} className={styles.invItemThree} alt={"image of " + value} style={{ gridRow : -11 + index}}/>
                     }else if(index < 24){
                         return <Image src={data.icons[value]} width={width} height={height} key={"item" + index} className={styles.invItemFour} alt={"image of " + value} style={{ gridRow : -17 + index}}/>
+                    }else if(index < 30){
+                        return <Image src={data.icons[value]} width={width} height={height} key={"item" + index} className={styles.invItemFive} alt={"image of " + value} style={{ gridRow : -23 + index}}/>
                     }else{
-                        return <Image src={data.icons[value]} width={width} height={height} key={"item" + index} className={styles.invItemFour} alt={"image of " + value} style={{ gridRow : -23 + index}}/>
+                        return <Image src={data.icons[value]} width={width} height={height} key={"item" + index} className={styles.invItemSix} alt={"image of " + value} style={{ gridRow : -29 + index}}/>
                     }
                 })
             }
@@ -31,8 +33,10 @@ export default function ShowInventory({pulls, count}){
                         return <div  key={"count" + index} className={styles.invCountThree} style={{ gridRow : -11 + index}}>x{value}</div>
                     }else if(index < 24){
                         return <div  key={"count" + index} className={styles.invCountFour} style={{ gridRow : -17 + index}}>x{value}</div>
+                    }else if(index < 30){
+                        return <div  key={"count" + index} className={styles.invCountFive} style={{ gridRow : -23 + index}}>x{value}</div>
                     }else{
-                        return <div  key={"count" + index} className={styles.invCountFour} style={{ gridRow : -23 + index}}>x{value}</div>
+                        return <div  key={"count" + index} className={styles.invCountSix} style={{ gridRow : -29 + index}}>x{value}</div>
                     }
                 })
             }

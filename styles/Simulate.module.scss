@@ -13,7 +13,7 @@
 
 .invBox{
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-row-gap: .5rem;
     grid-column-gap: .5rem;
@@ -44,6 +44,11 @@
     grid-column-end: 10;
 }
 
+.invItemSix{
+    grid-column-start: 11;  
+    grid-column-end: 12;
+}
+
 .invCountOne{
     grid-column-start: 2;  
     grid-column-end: 3;
@@ -67,4 +72,9 @@
 .invCountFive{
     grid-column-start: 10 ;
     grid-column-end: 11;
+}
+
+.invCountSix{
+    grid-column-start: 12;  
+    grid-column-end: 13;
 }
