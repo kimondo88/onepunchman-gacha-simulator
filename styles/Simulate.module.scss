@@ -13,8 +13,8 @@
 
 .invBox{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(14, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     grid-row-gap: .5rem;
     grid-column-gap: .5rem;
 }
@@ -22,7 +22,6 @@
 .invItemOne{
     grid-column-start: 1;  
     grid-column-end: 2;
-    grid-row-end: 15;
 }
 
 .invItemTwo{
@@ -30,13 +29,42 @@
     grid-column-end: 4;
 }
 
+.invItemThree{
+    grid-column-start: 5;  
+    grid-column-end: 6;
+}
+
+.invItemFour{
+    grid-column-start: 7;  
+    grid-column-end: 8;
+}
+
+.invItemFive{
+    grid-column-start: 9;  
+    grid-column-end: 10;
+}
+
 .invCountOne{
     grid-column-start: 2;  
     grid-column-end: 3;
-    grid-row-end: 15;
 }
 
 .invCountTwo{
     grid-column-start: 4  ;
     grid-column-end: 5;
+}
+
+.invCountThree{
+    grid-column-start: 6;  
+    grid-column-end: 7;
+}
+
+.invCountFour{
+    grid-column-start: 8 ;
+    grid-column-end: 9;
+}
+
+.invCountFive{
+    grid-column-start: 10 ;
+    grid-column-end: 11;
 }
