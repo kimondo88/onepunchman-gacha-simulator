@@ -17,6 +17,9 @@
     grid-template-rows: repeat(6, 1fr);
     grid-row-gap: .5rem;
     grid-column-gap: .5rem;
+    font-weight: 500;
+    background-color: white;
+    border-radius: 1rem;
 }
 
 .invItemOne{
@@ -77,4 +80,10 @@
 .invCountSix{
     grid-column-start: 12;  
     grid-column-end: 13;
+}
+
+@media (max-width: 500px){
+    .drawbox{
+        padding: 5vw;
+    }
 }

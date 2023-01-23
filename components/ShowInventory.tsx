@@ -2,10 +2,10 @@ import styles from '../styles/Simulate.module.scss';
 import Image from 'next/image';
 import data from '../data/items.json';
 
-export default function ShowInventory({pulls, count}){
+export default function ShowInventory({pulls, count, className}){
     const width = 40, height = 30;
     return (
-        <div id="invBox" className={styles.invBox}>
+        <div id="invBox" className={styles.invBox + " " + className}>
             {
                 pulls.map((value, index) => {
                     if(index < 6){

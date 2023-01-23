@@ -72,8 +72,8 @@ export default function Simulate(){
             <p className={utils.marginBlock}>{select}</p>
             <Chosen chosen={select}/>
             <DrawButton className={utils.marginBlock} draw={Draw} coins={coins} char={select}/>
-            <DrawBox current={current}/>
-            <ShowInventory pulls={pulls} count={count}/>
+            <DrawBox className={utils.marginBlock} current={current}/>
+            <ShowInventory className={utils.padding} pulls={pulls} count={count}/>
         </>
     )
 }
