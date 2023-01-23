@@ -1,6 +1,6 @@
-export default function DrawButton({draw, coins, char}){
+export default function DrawButton({draw, coins, char, className}){
     return (
-        <button onClick={() => {
+        <button className={className} onClick={() => {
             draw(coins, char);
         }}>Draw</button>
     )

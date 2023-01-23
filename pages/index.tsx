@@ -14,10 +14,6 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to OPM Gacha simulator!
         </h1>
-
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
-        </p>
         <Simulate></Simulate>
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>

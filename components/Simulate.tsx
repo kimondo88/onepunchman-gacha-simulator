@@ -6,6 +6,7 @@ import DrawButton from "./DrawButton";
 import DrawBox from "./DrawBox";
 import items from "../data/items.json";
 import ShowInventory from "./ShowInventory";
+import utils from '../styles/Utils.module.scss';
 
 export default function Simulate(){
     const [coins, setCoins] = useState(0);
@@ -68,9 +69,9 @@ export default function Simulate(){
             <p>Ow gacha coins used: x{coins}</p>
             <br/>
             <Select setSelect={setSelect}/>
-            <p>{select}</p>
+            <p className={utils.marginBlock}>{select}</p>
             <Chosen chosen={select}/>
-            <DrawButton draw={Draw} coins={coins} char={select}/>
+            <DrawButton className={utils.marginBlock} draw={Draw} coins={coins} char={select}/>
             <DrawBox current={current}/>
             <ShowInventory pulls={pulls} count={count}/>
         </>

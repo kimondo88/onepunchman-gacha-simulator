@@ -1,3 +1,5 @@
+$margin: .5rem;
+
 .container {
   min-height: 100vh;
   padding: 0 0.5rem;
@@ -21,7 +23,7 @@
 .title {
   margin: 0 0 1rem;
   line-height: 1.15;
-  font-size: 3.6rem;
+  font-size: 1.8rem;
 }
 
 .title {
@@ -87,5 +89,14 @@
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+}
+
+@media (min-width: 900px) {
+  .title {
+    margin: 0 0 1rem;
+    line-height: 1.15;
+    font-size: 3.6rem;
+    max-width: 75vw;
   }
 }
