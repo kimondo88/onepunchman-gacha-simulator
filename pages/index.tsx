@@ -15,35 +15,6 @@ export default function Home() {
           Welcome to OPM Gacha simulator!
         </h1>
         <Simulate></Simulate>
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
       </main>
 
       <footer>
@@ -55,6 +26,7 @@ export default function Home() {
           Powered by{' '}
           <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
         </a>
+        <span id="about">Made by Freddy Beasley</span>
       </footer>
 
       <style jsx>{`
@@ -73,6 +45,7 @@ export default function Home() {
           display: flex;
           justify-content: center;
           align-items: center;
+          background-color: white;
         }
         footer img {
           margin-left: 0.5rem;
@@ -83,6 +56,10 @@ export default function Home() {
           align-items: center;
           text-decoration: none;
           color: inherit;
+        }
+        footer #about{
+          margin-left: 2.5rem;
+          font-weight: bold;
         }
         code {
           background: #fafafa;
