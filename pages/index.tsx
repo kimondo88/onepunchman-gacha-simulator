@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '../styles/Home.module.scss';
 import Simulate from '../components/Simulate';
 
@@ -29,7 +30,7 @@ export default function Home() {
         </a>
         <span id="about">Made by Freddy Beasley</span>
         <br></br>
-        <a id="disclaimer" href="/disclaim">Disclaimer</a>
+        <Link id="disclaimer" href="/disclaim">Disclaimer</Link>
       </footer>
 
       <style jsx>{`
