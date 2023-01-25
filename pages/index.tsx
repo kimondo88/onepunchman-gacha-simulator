@@ -1,4 +1,5 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import Image from 'next/image';
 import styles from '../styles/Home.module.scss';
 import Simulate from '../components/Simulate';
 
@@ -6,7 +7,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Gacha simulator One Punchman</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -24,9 +25,11 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
+          <Image src="/vercel.svg" width="50" height="50" alt="Vercel" className={styles.logo} />
         </a>
         <span id="about">Made by Freddy Beasley</span>
+        <br></br>
+        <a id="disclaimer" href="/disclaim">Disclaimer</a>
       </footer>
 
       <style jsx>{`
@@ -60,6 +63,9 @@ export default function Home() {
         footer #about{
           margin-left: 2.5rem;
           font-weight: bold;
+        }
+        footer #disclaimer{
+          margin-left: .5rem;
         }
         code {
           background: #fafafa;

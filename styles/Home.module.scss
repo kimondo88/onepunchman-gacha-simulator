@@ -85,6 +85,11 @@ $margin: .5rem;
   height: 1em;
 }
 
+.disclaim{
+  margin: 15%;
+  max-width: 45ch;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;

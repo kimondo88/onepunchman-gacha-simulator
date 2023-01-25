@@ -4,11 +4,21 @@
     grid-template-rows: repeat(2, 2fr);
     grid-row-gap: 1rem;
     grid-column-gap: 1rem;
+    opacity: 0;
 }
 
 .drawitem{
     width: 5vw;
     height: 5vh;
+}
+
+.appear{
+    animation-name: showitself;
+    animation-duration: 1000ms;
+    animation-iteration-count: 1;
+    animation-delay: 500ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
 }
 
 .invBox{
@@ -80,6 +90,12 @@
 .invCountSix{
     grid-column-start: 12;  
     grid-column-end: 13;
+}
+
+@keyframes showitself {
+    0%   {opacity: 0;}
+    50%  {opacity: .5;}
+    100% {opacity: 1;}
 }
 
 @media (max-width: 500px){
