@@ -9,4 +9,4 @@ How to use it.
 
 ### Click a link linking to the site with app
 
-[Link to site](https://onepunchman-gacha-simulator.herokuapp.com)
+[Link to site](https://onepunchman-gacha-simulator.vercel.app)
