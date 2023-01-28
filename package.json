@@ -1,5 +1,10 @@
 {
-  "private": true,
+  "name": "gacha-simulator",
+  "author": "Adam \"Kim\" Tarczewski",
+  "version": "1.0.0",
+  "description": "gacha simulator app based on onepunchman 2.0 game, check your drops",
+  "private": false,
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
