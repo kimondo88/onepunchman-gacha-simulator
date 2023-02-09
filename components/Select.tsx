@@ -10,6 +10,7 @@ export default function Select({setSelect}){
             <option value="Owblizzard">Old World Blizzard</option>
             <option value="Owdsk">Old World Deep Sea King</option>
             <option value="Owpg">Old World Pig God</option>
+            <option value="Owsonic">Old World Sonic</option>
         </select>
     )
 }
