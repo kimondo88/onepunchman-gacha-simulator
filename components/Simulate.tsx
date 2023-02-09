@@ -7,6 +7,7 @@ import DrawBox from "./DrawBox";
 import items from "../data/items.json";
 import ShowInventory from "./ShowInventory";
 import utils from '../styles/Utils.module.scss';
+import { Random } from "random-js";
 
 export default function Simulate(){
     const [coins, setCoins] = useState(0);
@@ -15,6 +16,7 @@ export default function Simulate(){
     const [current, setCurrent] = useState([]);
     const [pulls, setPulls] = useState([]);
     const [count, setCount] = useState([]);
+    const randomInt = new Random();
 
     useMemo(() => {
         setPulls(Object.keys(inventory));
@@ -26,8 +28,9 @@ export default function Simulate(){
         //make for loop
         const length = items.normal["number"].length;
         for(let i = 0; i < 10; i++){
-            const random = Math.floor(Math.random() * 1008);
+            const random = randomInt.integer(0, 1008);
             for(let j = 0; j <  length; j++){
+                // iterate over for for whichever happen to be drawed in the loot array
                 if(random <= items.normal["number"][j] && j == 0){
                     draw.push(select)
                     break;

@@ -1,3 +1,8 @@
+Version 1.1.1
+
+    add random number generator js library for better drawing
+
+
 Version 1.1.0
 
     add old word sonic character
