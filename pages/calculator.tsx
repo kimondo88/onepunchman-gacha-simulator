@@ -2,43 +2,40 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/Home.module.scss';
-import Simulate from '../components/Simulate';
+import SpiritHallComplete from '../components/SpiritHallComplete';
+import SpiritHallOldWorld from "../components/SpiritHallOldWorld";
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Gacha simulator One Punchman</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main>
-        <h1 className={styles.title}>
-          Welcome to OPM Gacha simulator!
-        </h1>
-        <Link id="calculator" href="/calculator" style={{
-          "backgroundColor" : "white", 
-          "width" : "15ch",
-          "textAlign" : "center"
-          }}>Spirit Hall Calc</Link>
-        <Simulate></Simulate>
-      </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image src="/vercel.svg" width="50" height="50" alt="Vercel" className={styles.logo} />
-        </a>
-        <span id="about">Made by Freddy Beasley</span>
-        <br></br>
-        <Link id="disclaimer" href="/disclaim">Disclaimer</Link>
-      </footer>
-
-      <style jsx>{`
+export default function Calculator() {
+    return (
+      <div className={styles.container}>
+        <Head>
+          <title>Spirit Hall Calculator One Punchman</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+  
+        <main>
+          <h1 className={styles.title}>
+            Welcome to OPM2.0 Spirit Hall Calculator!
+          </h1>
+          <SpiritHallComplete></SpiritHallComplete>
+          <SpiritHallOldWorld></SpiritHallOldWorld>
+          <button><Link href="/">Back</Link></button>
+        </main>
+  
+        <footer>
+          <a
+            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Powered by{' '}
+            <Image src="/vercel.svg" width="50" height="50" alt="Vercel" className={styles.logo} />
+          </a>
+          <span id="about">Made by Freddy Beasley</span>
+          <br></br>
+          <Link id="disclaimer" href="/disclaim">Disclaimer</Link>
+        </footer>
+        <style jsx>{`
         main {
           padding: 5rem 0;
           flex: 1;
@@ -97,5 +94,5 @@ export default function Home() {
         }
       `}</style>
     </div>
-  )
+    )
 }

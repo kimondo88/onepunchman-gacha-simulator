@@ -74,5 +74,23 @@
         "tiny amount of strength crystal" : "/images/drops/tstrcrystal.png",
         "decent cash" : "/images/drops/dcash.png",
         "decent character exp" : "/images/drops/dexp.png"
+    },
+    "owshcopies" : {
+        "sh0" : "27",
+        "sh1" : "30",
+        "sh2" : "33",
+        "sh3" : "36",
+        "sh4" : "42",
+        "sh5" : "48",
+        "sh6" : "57"
+    },
+    "completeshcopies" : {
+        "sh0" : "23",
+        "sh1" : "25",
+        "sh2" : "27",
+        "sh3" : "29",
+        "sh4" : "33",
+        "sh5" : "37",
+        "sh6" : "43"
     }
 }
