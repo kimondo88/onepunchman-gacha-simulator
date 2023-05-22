@@ -2,25 +2,20 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/Home.module.scss';
-import SpiritHallComplete from '../components/SpiritHallComplete';
-import SpiritHallOldWorld from "../components/SpiritHallOldWorld";
 import Limitbreakthrough from '../components/limitbreakthrough';
 
 export default function Calculator() {
     return (
       <div className={styles.container}>
         <Head>
-          <title>Spirit Hall Calculator One Punchman</title>
+          <title>Limit Breakthrough Calculator! One Punchman</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
   
         <main>
           <h1 className={styles.title}>
-            Welcome to OPM2.0 Spirit Hall Calculator!
+            Welcome to OPM2.0 Limit Breakthrough Calculator!
           </h1>
-          <SpiritHallComplete></SpiritHallComplete>
-          <SpiritHallOldWorld></SpiritHallOldWorld>
-          <br></br>
           <Limitbreakthrough></Limitbreakthrough>
           <button><Link href="/">Back</Link></button>
         </main>

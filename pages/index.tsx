@@ -16,11 +16,20 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to OPM Gacha simulator!
         </h1>
+        <div className={styles.grid}>
         <Link id="calculator" href="/calculator" style={{
           "backgroundColor" : "white", 
           "width" : "15ch",
-          "textAlign" : "center"
+          "textAlign" : "center",
+          "margin" : "auto"
           }}>Spirit Hall Calc</Link>
+           <Link id="lbsCalc" href="/lbs" style={{
+          "backgroundColor" : "black", 
+          "width" : "15ch",
+          "textAlign" : "center",
+          "color" : "white"
+          }}>Lbs Calc</Link>
+          </div>
         <Simulate></Simulate>
       </main>
 
