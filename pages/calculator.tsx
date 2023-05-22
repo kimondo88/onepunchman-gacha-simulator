@@ -4,7 +4,6 @@ import Link from 'next/link';
 import styles from '../styles/Home.module.scss';
 import SpiritHallComplete from '../components/SpiritHallComplete';
 import SpiritHallOldWorld from "../components/SpiritHallOldWorld";
-import Limitbreakthrough from '../components/limitbreakthrough';
 
 export default function Calculator() {
     return (
@@ -21,7 +20,6 @@ export default function Calculator() {
           <SpiritHallComplete></SpiritHallComplete>
           <SpiritHallOldWorld></SpiritHallOldWorld>
           <br></br>
-          <Limitbreakthrough></Limitbreakthrough>
           <button><Link href="/">Back</Link></button>
         </main>
   

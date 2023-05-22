@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/Home.module.scss';
-import Limitbreakthrough from '../components/limitbreakthrough';
+import Limitbreakthrough from '../components/Limitbreakthrough';
 
 export default function Calculator() {
     return (
