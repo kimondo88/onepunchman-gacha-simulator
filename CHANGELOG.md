@@ -1,3 +1,7 @@
+Version 1.2.1
+
+    add lbs35 breakthrough support
+
 Version 1.1.1
 
     add random number generator js library for better drawing
