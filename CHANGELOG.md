@@ -17,3 +17,8 @@ Version: 1.0.0
     Working gacha draws.
     Mobile Version
 
+Version: 1.21.1
+    Added Lbs35 functionality for old worlds.
+
+Version: 1.3.1
+    Added Lbs35 functionality for completes.
