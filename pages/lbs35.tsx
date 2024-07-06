@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/Home.module.scss';
 import Limitbreakthrough35 from '../components/Limitbreakthrough35';
+import LimitbreakthroughC35 from '../components/LimitbreakthroughC35';
 
 export default function Calculator() {
     return (
@@ -17,6 +18,7 @@ export default function Calculator() {
             Welcome to OPM2.0 Limit Breakthrough Calc 35!
           </h1>
           <Limitbreakthrough35></Limitbreakthrough35>
+          <LimitbreakthroughC35></LimitbreakthroughC35>
           <button><Link href="/">Back</Link></button>
         </main>
   
